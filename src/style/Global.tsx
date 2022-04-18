@@ -13,12 +13,13 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: ${({ theme }) => theme.colors.background};
-
     img {
       height: auto;
       max-width: 100%;
     }
   }
 `
+// background: ${({ theme }) => theme.isDark ? "url('/images/bg.jpg')" : "url('/images/bg.jpg')" };
+    
 
 export default GlobalStyle
