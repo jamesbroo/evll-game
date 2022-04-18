@@ -19,7 +19,7 @@ import CongratulationsCard from './components/CongratulationsCard'
 import AuctionCakeBurn from './components/AuctionCakeBurn'
 
 const FAQS_BG_LIGHT = 'linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)'
-const FAQ_BG_DARK = 'linear-gradient(180deg, #434575 0%, #66578D 100%)'
+const FAQ_BG_DARK = 'linear-gradient(180deg, #085e46 0%, #032b20 100%)'
 const CAKE_BURN_BG_LIGHT = 'radial-gradient(50% 79.31% at 50% 50%, #FAF9FA 0%, #EAECF4 100%)'
 const CAKE_BURN_TOP_FILL_LIGHT = 'radial-gradient(ellipse at bottom, #f0f1f6, #EAECF4)'
 const CAKE_BURN_BG_DARK = 'radial-gradient(103.12% 50% at 50% 50%, #152534 0%, #191326 100%)'

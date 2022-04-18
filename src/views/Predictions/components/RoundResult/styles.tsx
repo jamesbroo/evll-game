@@ -61,7 +61,7 @@ export const PayoutRow: React.FC<PayoutRowProps> = ({ positionLabel, multiplier,
           {t('%multiplier% Payout', { multiplier: formattedMultiplier })}
         </Text>
         <Text mx="4px">|</Text>
-        <Text fontSize="12px" lineHeight="18px">{`${formatBnb(amount)} BNB`}</Text>
+        <Text fontSize="12px" lineHeight="18px">{`${formatBnb(amount)} EAVL`}</Text>
       </Flex>
     </Row>
   )
@@ -201,7 +201,7 @@ export const PrizePoolHistoryRow: React.FC<PrizePoolHistoryRowProps> = ({ totalA
   return (
     <Row {...props}>
       <Text bold>{t('Prize Pool')}:</Text>
-      <Text bold>{`${getPrizePoolAmountHistory(totalAmount)} BNB`}</Text>
+      <Text bold>{`${getPrizePoolAmountHistory(totalAmount)} EAVL`}</Text>
     </Row>
   )
 }
