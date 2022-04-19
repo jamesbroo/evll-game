@@ -8,6 +8,7 @@ import { getBetHistory } from 'state/predictions/helpers'
 import { useGetPredictionsStatus, useIsHistoryPaneOpen } from 'state/predictions/hooks'
 import { useAppDispatch } from 'state'
 import { setHistoryPaneState } from 'state/predictions'
+import roundLogo from "assets/round.png"
 
 /**
  * @see https://github.com/animate-css/animate.css/tree/main/source
@@ -174,7 +175,8 @@ const CollectWinningsPopup = () => {
     <CSSTransition in={isOpen} unmountOnExit nodeRef={ref} timeout={1000} classNames="popup">
       <Wrapper ref={ref}>
         <Popup>
-          <TrophyGoldIcon width="64px" style={{ flex: 'none' }} mr="8px" />
+          {/* <TrophyGoldIcon width="64px" style={{ flex: 'none' }} mr="8px" /> */}
+          <img src={roundLogo} width="64px" height="54px" alt="round-logo" style={{flex: "none"}} />
           <Button style={{ flex: 1 }} onClick={handleOpenHistory}>
             {t('Collect Winnings')}
           </Button>
