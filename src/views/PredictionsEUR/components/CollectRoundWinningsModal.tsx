@@ -24,7 +24,7 @@ import { Bet } from 'state/types'
 import { useTranslation } from 'contexts/Localization'
 import { useBNBBusdPrice } from 'hooks/useBUSDPrice'
 import useToast from 'hooks/useToast'
-import { usePredictionsContract } from 'hooks/useContract'
+import { usePredictionsContractEUR } from 'hooks/useContract'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { useGetHistory, useGetIsFetchingHistory } from 'state/predictionsEUR/hooks'
@@ -82,7 +82,7 @@ const CollectRoundWinningsModal: React.FC<CollectRoundWinningsModalProps> = ({ o
   const { t } = useTranslation()
   const { toastSuccess, toastError } = useToast()
   const { callWithGasPrice } = useCallWithGasPrice()
-  const predictionsContract = usePredictionsContract()
+  const predictionsContract = usePredictionsContractEUR()
   const bnbBusdPrice = useBNBBusdPrice()
   const dispatch = useAppDispatch()
   const isLoadingHistory = useGetIsFetchingHistory()

@@ -121,7 +121,7 @@ const OpenRoundCard: React.FC<OpenRoundCardProps> = ({
     <CardFlip isFlipped={isSettingPosition} height="404px">
       <Card borderBackground={getBorderBackground(theme, 'next')}>
         <CardHeader
-          status="next"
+          status="canceled"
           epoch={round.epoch}
           icon={<PlayCircleOutlineIcon color="white" mr="4px" width="21px" />}
           title={t('Next')}

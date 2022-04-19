@@ -24,7 +24,7 @@ const SoonRoundCard: React.FC<SoonRoundCardProps> = ({ round }) => {
 
   return (
     <Card borderBackground={getBorderBackground(theme, 'soon')}>
-      <CardHeader status="soon" icon={<WaitIcon mr="4px" width="21px" />} title={t('Later')} epoch={round.epoch} />
+      <CardHeader status="canceled" icon={<WaitIcon mr="4px" width="21px" />} title={t('Later')} epoch={round.epoch} />
       <CardBody p="16px">
         <MultiplierArrow isDisabled />
         <RoundResultBox>

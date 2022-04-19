@@ -35,12 +35,12 @@ const StyledText  = styled(Text)`
   }
 `
 const StyledAsset = styled.div`
-  width: 142px;
+  width: 160px;
   height: 125px;
-  border-radius: 1.302vw;
+  border-radius: 24px;
   background-color: #142436;
   text-align: center;
-  padding: 0.8vw;
+  padding: 10px;
   box-shadow: unset;
 `
 

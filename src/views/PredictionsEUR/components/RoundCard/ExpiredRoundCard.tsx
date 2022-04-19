@@ -62,7 +62,7 @@ const ExpiredRoundCard: React.FC<ExpiredRoundCardProps> = ({
     <Box position="relative">
       <StyledExpiredRoundCard borderBackground={getBorderBackground(theme, 'expired')}>
         <CardHeader
-          status="expired"
+          status="canceled"
           icon={<BlockIcon mr="4px" width="21px" color="textDisabled" />}
           title={t('Expired')}
           epoch={round.epoch}

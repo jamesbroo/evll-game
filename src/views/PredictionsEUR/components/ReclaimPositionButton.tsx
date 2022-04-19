@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react'
 import { AutoRenewIcon, Button, ButtonProps } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
-import { usePredictionsContract } from 'hooks/useContract'
+import { usePredictionsContractEUR } from 'hooks/useContract'
 import useToast from 'hooks/useToast'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { ToastDescriptionWithTx } from 'components/Toast'
@@ -15,7 +15,7 @@ interface ReclaimPositionButtonProps extends ButtonProps {
 const ReclaimPositionButton: React.FC<ReclaimPositionButtonProps> = ({ epoch, onSuccess, children, ...props }) => {
   const [isPendingTx, setIsPendingTx] = useState(false)
   const { t } = useTranslation()
-  const predictionsContract = usePredictionsContract()
+  const predictionsContract = usePredictionsContractEUR()
   const { callWithGasPrice } = useCallWithGasPrice()
   const { toastSuccess, toastError } = useToast()
 
