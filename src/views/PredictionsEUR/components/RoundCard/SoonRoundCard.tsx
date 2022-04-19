@@ -23,8 +23,8 @@ const SoonRoundCard: React.FC<SoonRoundCardProps> = ({ round }) => {
   const { theme } = useTheme()
 
   return (
-    <Card borderBackground={getBorderBackground(theme, 'soon')}>
-      <CardHeader status="soon" icon={<WaitIcon mr="4px" width="21px" />} title={t('Later')} epoch={round.epoch} />
+    <Card borderBackground={getBorderBackground(theme, 'next')}>
+      <CardHeader status="next" icon={<WaitIcon mr="4px" width="21px" />} title={t('Later')} epoch={round.epoch} />
       <CardBody p="16px">
         <MultiplierArrow isDisabled />
         <RoundResultBox>

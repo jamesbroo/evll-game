@@ -68,6 +68,7 @@ const MultiplierArrow: React.FC<MultiplierArrowProps> = ({
   const { t } = useTranslation()
   const upColor = getTextColor('success')(isActive, isDisabled, isHouse)
   const downColor = getTextColor('failure')(isActive, isDisabled, isHouse)
+  // const greenColor = "#0f0"
   const textColor = getTextColor()(isActive, isDisabled, isHouse)
   const multiplierText = (
     <Box>
@@ -102,7 +103,7 @@ const MultiplierArrow: React.FC<MultiplierArrowProps> = ({
           {getEnteredTag({ bottom: 0, right: 0 })}
           <Content>
             {!isDisabled && multiplierText}
-            <Text bold fontSize="20px" mb="8px" color={downColor} textTransform="uppercase">
+            <Text bold fontSize="20px" mb="8px" color="#ED4B9E" textTransform="uppercase">
               {t('Down')}
             </Text>
           </Content>
@@ -117,7 +118,7 @@ const MultiplierArrow: React.FC<MultiplierArrowProps> = ({
         <RoundMultiplierUpArrow isActive={isActive} />
         {getEnteredTag({ top: 0, left: 0 })}
         <Content>
-          <Text bold fontSize="20px" lineHeight="21px" color={upColor} textTransform="uppercase">
+          <Text bold fontSize="20px" lineHeight="21px" color="#10b687" textTransform="uppercase">
             {t('Up')}
           </Text>
           {!isDisabled && multiplierText}
