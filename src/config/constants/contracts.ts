@@ -60,11 +60,20 @@ export default {
     97: '',
   },
   predictions: {
-    56: '0x767d2C6D0F04255dBB243384F70EF3Ad5b3E8028',
+    56: '0x767d2C6D0F04255dBB243384F70EF3Ad5b3E8028', // BNB/USD prediction
+    97: '',
+  },
+
+  predictionsEUR: {
+    56: '0x6CA46f46ca58996aE0998F1B8648390aF2833793',     // EUR/USD 
     97: '',
   },
   chainlinkOracle: {
     56: '0xD276fCF34D54A926773c399eBAa772C12ec394aC',
+    97: '',
+  },
+  chainlinkOracleEUR: {
+    56: '0x0bf79F617988C472DcA68ff41eFe1338955b9A80',
     97: '',
   },
   bunnySpecialCakeVault: {

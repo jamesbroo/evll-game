@@ -46,6 +46,8 @@ const Team = lazy(() => import('./views/Teams/Team'))
 const TradingCompetition = lazy(() => import('./views/TradingCompetition'))
 const Predictions = lazy(() => import('./views/Predictions'))
 const PredictionsLeaderboard = lazy(() => import('./views/Predictions/Leaderboard'))
+const PredictionsEUR = lazy(() => import('./views/PredictionsEUR'))
+const PredictionsLeaderboardEUR = lazy(() => import('./views/PredictionsEUR/Leaderboard'))
 const Voting = lazy(() => import('./views/Voting'))
 const Proposal = lazy(() => import('./views/Voting/Proposal'))
 const CreateProposal = lazy(() => import('./views/Voting/CreateProposal'))
@@ -86,7 +88,7 @@ const App: React.FC = () => {
         <SuspenseWithChunkError fallback={<PageLoader />}>
           <Switch>
             <Route path="/" exact>
-              <Predictions />
+              <PredictionsEUR />
             </Route>
             {/* <Route exact path="/farms/auction">
               <FarmAuction />
@@ -118,9 +120,16 @@ const App: React.FC = () => {
             <Route exact path="/prediction">
               <Predictions />
             </Route>
-            <Route path="/prediction/leaderboard">
+            {/* <Route path="/prediction/leaderboard">
               <PredictionsLeaderboard />
+            </Route> */}
+            <Route exact path="/predictionEUR">
+              <PredictionsEUR />
             </Route>
+            {/* <Route path="/predictionEUR/leaderboard">
+              <PredictionsLeaderboardEUR />
+            </Route> */}
+
             {/* <Route exact path="/voting">
               <Voting />
             </Route>

@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import SwiperCore, { Keyboard, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Box } from '@pancakeswap/uikit'
+import { Box, Text } from '@pancakeswap/uikit'
 import { useGetCurrentEpoch, useGetSortedRounds } from 'state/predictions/hooks'
+import EUR from "assets/EUR.png"
+import BNB from "assets/bnb.png"
 import 'swiper/swiper.min.css'
 import RoundCard from './components/RoundCard'
 import Menu from './components/Menu'
@@ -24,6 +26,24 @@ const StyledSwiper = styled.div`
     width: 320px;
   }
 `
+
+const StyledText  = styled(Text)`
+  height: 18px;
+  justify-self: start;
+  ${({ theme }) => theme.mediaQueries.lg} {
+    text-align: center;
+  }
+`
+const StyledAsset = styled.div`
+  width: 142px;
+  height: 125px;
+  border-radius: 1.302vw;
+  background-color: #142436;
+  text-align: center;
+  padding: 0.8vw;
+  box-shadow: unset;
+`
+
 const Positions: React.FC<{ view?: PageView }> = ({ view }) => {
   const { setSwiper } = useSwiper()
   const rounds = useGetSortedRounds()
@@ -37,6 +57,17 @@ const Positions: React.FC<{ view?: PageView }> = ({ view }) => {
 
   return (
     <Box overflow="hidden">
+      <StyledAsset style={{marginLeft: "128px", display: "flex"}} >
+          <div style={{marginRight: "32px"}}>
+            <a href="/prediction"> <img src={BNB} alt='bnb-img' width="50px" height="50px" />  </a>
+            <hr style={{backgroundColor: "#f0b90b", height: "4px"}} />
+            <StyledText> 15 min </StyledText>
+          </div>
+          <div>
+            <a href="/predictionEUR"> <img src={EUR} alt='bnb-img' width="50px" height="50px" /> </a>
+            <StyledText> 5 min </StyledText>
+          </div>
+      </StyledAsset>
       <Menu />
       <StyledSwiper>
         <Swiper

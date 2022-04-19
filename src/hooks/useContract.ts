@@ -20,6 +20,7 @@ import {
   getCakeVaultContract,
   getIfoPoolContract,
   getPredictionsContract,
+  getPredictionsContractEUR,
   getChainlinkOracleContract,
   getSouschefV2Contract,
   getLotteryV2Contract,
@@ -174,6 +175,11 @@ export const useIfoPoolContract = () => {
 export const usePredictionsContract = () => {
   const { library } = useActiveWeb3React()
   return useMemo(() => getPredictionsContract(library.getSigner()), [library])
+}
+
+export const usePredictionsContractEUR = () => {
+  const { library } = useActiveWeb3React()
+  return useMemo(() => getPredictionsContractEUR(library.getSigner()), [library])
 }
 
 export const useChainlinkOracleContract = () => {

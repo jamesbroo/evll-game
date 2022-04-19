@@ -596,6 +596,7 @@ export interface State {
   farms: SerializedFarmsState
   pools: PoolsState
   predictions: PredictionsState
+  predictionsEUR: PredictionsState
   profile: ProfileState
   teams: TeamsState
   voting: VotingState

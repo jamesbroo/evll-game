@@ -20,7 +20,9 @@ import {
   getCakeVaultAddress,
   getIfoPoolAddress,
   getPredictionsAddress,
+  getPredictionsAddressEUR,
   getChainlinkOracleAddress,
+  getChainlinkOracleAddressEUR,
   getMulticallAddress,
   getBunnySpecialCakeVaultAddress,
   getBunnySpecialPredictionAddress,
@@ -149,8 +151,15 @@ export const getPredictionsContract = (signer?: ethers.Signer | ethers.providers
   return getContract(predictionsAbi, getPredictionsAddress(), signer) as PredictionsContract
 }
 
+export const getPredictionsContractEUR = (signer?: ethers.Signer | ethers.providers.Provider) => {
+  return getContract(predictionsAbi, getPredictionsAddressEUR(), signer) as PredictionsContract
+}
+
 export const getChainlinkOracleContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(chainlinkOracleAbi, getChainlinkOracleAddress(), signer) as ChainLinkOracleContract
+}
+export const getChainlinkOracleContractEUR = (signer?: ethers.Signer | ethers.providers.Provider) => {
+  return getContract(chainlinkOracleAbi, getChainlinkOracleAddressEUR(), signer) as ChainLinkOracleContract
 }
 export const getMulticallContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(MultiCallAbi, getMulticallAddress(), signer)

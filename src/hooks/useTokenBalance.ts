@@ -4,7 +4,7 @@ import tokens from 'config/constants/tokens'
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import { BIG_ZERO } from 'utils/bigNumber'
-import { getBep20Contract, getCakeContract, getPredictionsContract } from 'utils/contractHelpers'
+import { getBep20Contract, getCakeContract, getPredictionsContract, getPredictionsContractEUR } from 'utils/contractHelpers'
 import { simpleRpcProvider } from 'utils/providers'
 import useLastUpdated from './useLastUpdated'
 import { useFastFresh, useSlowFresh } from './useRefresh'
@@ -83,6 +83,24 @@ export const useEVLLllowance = () => {
 
     fetchTotalSupply()
   }, [slowRefresh, account, predictionContract.address])
+
+  return totalSupply
+}
+
+export const useEVLLllowanceEUR = () => {
+  const slowRefresh = useSlowFresh()
+  const [totalSupply, setTotalSupply] = useState<BigNumber>()
+  const { account } = useWeb3React()
+  const predictionContractEUR = getPredictionsContractEUR()
+  useEffect(() => {
+    async function fetchTotalSupply() {
+      const cakeContract = getCakeContract()
+      const supply = await cakeContract.allowance(account, predictionContractEUR.address)
+      setTotalSupply(new BigNumber(supply.toString()))
+    }
+
+    fetchTotalSupply()
+  }, [slowRefresh, account, predictionContractEUR.address])
 
   return totalSupply
 }

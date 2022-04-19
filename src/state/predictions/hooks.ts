@@ -125,7 +125,7 @@ export const useGetLastOraclePrice = () => {
 export const useGetCurrentRoundLockTimestamp = () => {
   const currentRound = useGetCurrentRound()
   const intervalSeconds = useGetIntervalSeconds()
-
+  console.log('debug current round', currentRound)
   if (!currentRound.lockTimestamp) {
     return currentRound.startTimestamp + intervalSeconds
   }

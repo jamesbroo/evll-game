@@ -61,8 +61,14 @@ export const getIfoPoolAddress = () => {
 export const getPredictionsAddress = () => {
   return getAddress(addresses.predictions)
 }
+export const getPredictionsAddressEUR = () => {
+  return getAddress(addresses.predictionsEUR)
+}
 export const getChainlinkOracleAddress = () => {
   return getAddress(addresses.chainlinkOracle)
+}
+export const getChainlinkOracleAddressEUR = () => {
+  return getAddress(addresses.chainlinkOracleEUR)
 }
 export const getBunnySpecialCakeVaultAddress = () => {
   return getAddress(addresses.bunnySpecialCakeVault)

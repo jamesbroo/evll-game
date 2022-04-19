@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import farmsReducer from './farms'
 import poolsReducer from './pools'
 import predictionsReducer from './predictions'
+import predictionsReducerEUR from './predictionsEUR'
 import profileReducer, { initialState as profileInitialState } from './profile'
 import teamsReducer from './teams'
 import achievementsReducer from './achievements'
@@ -41,6 +42,7 @@ const store = configureStore({
     farms: farmsReducer,
     pools: poolsReducer,
     predictions: predictionsReducer,
+    predictionsEUR: predictionsReducerEUR,
     profile: profileReducer,
     teams: teamsReducer,
     voting: votingReducer,
