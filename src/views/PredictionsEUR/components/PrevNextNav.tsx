@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowBackIcon, ArrowForwardIcon, BunnyCardsIcon, Flex, IconButton } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 import { useGetCurrentEpoch, useGetSortedRounds } from 'state/predictionsEUR/hooks'
+import roundLogo from "assets/round.png"
 import useSwiper from '../hooks/useSwiper'
 
 const StyledPrevNextNav = styled(Flex)`
@@ -54,7 +55,8 @@ const PrevNextNav = () => {
         <ArrowBackIcon color="primary" width="24px" />
       </IconButton>
       <Icon onClick={handleSlideToLive}>
-        <BunnyCardsIcon width="64px" />
+        {/* <BunnyCardsIcon width="64px" /> */}
+        <img src={roundLogo} width="64px" height="64px" alt="round-logo" />
       </Icon>
       <IconButton variant="text" scale="sm" onClick={handleNextSlide}>
         <ArrowForwardIcon color="primary" width="24px" />

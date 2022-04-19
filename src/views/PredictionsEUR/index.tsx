@@ -72,7 +72,7 @@ const PredictionsEUR = () => {
 
   
 
-
+  console.log('debug EUR st2')
   return (
     <>
       <PageMeta />
