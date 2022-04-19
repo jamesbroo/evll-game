@@ -32,7 +32,7 @@ import { multiplyPriceByAmount } from 'utils/prices'
 import { formatNumber } from 'utils/formatBalance'
 import { logError } from 'utils/sentry'
 import { getPayout } from './History/helpers'
-import roundLogo from "assests/round.png"
+import roundLogo from "assets/round.png"
 
 interface CollectRoundWinningsModalProps extends InjectedModalProps {
   onSuccess?: () => Promise<void>
