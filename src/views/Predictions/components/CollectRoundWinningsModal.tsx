@@ -32,6 +32,7 @@ import { multiplyPriceByAmount } from 'utils/prices'
 import { formatNumber } from 'utils/formatBalance'
 import { logError } from 'utils/sentry'
 import { getPayout } from './History/helpers'
+import roundLogo from "assests/round.png"
 
 interface CollectRoundWinningsModalProps extends InjectedModalProps {
   onSuccess?: () => Promise<void>
@@ -149,7 +150,8 @@ const CollectRoundWinningsModal: React.FC<CollectRoundWinningsModalProps> = ({ o
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>
       <ModalBody p="24px">
-        <TrophyGoldIcon width="96px" mx="auto" mb="24px" />
+        {/* <TrophyGoldIcon width="96px" mx="auto" mb="24px" /> */}
+        <img src={roundLogo} width="96px" height="96px" alt="round-log" />
         <Flex alignItems="start" justifyContent="space-between" mb="8px">
           <Text>{t('Collecting')}</Text>
           <Box style={{ textAlign: 'right' }}>
