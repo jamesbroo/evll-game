@@ -65,7 +65,7 @@ export default {
   },
 
   predictionsEUR: {
-    56: '0x6CA46f46ca58996aE0998F1B8648390aF2833793',     // EUR/USD 
+    56: '0xB1c78Ac1eB49B5aa24490b81BC3a593F4A1C8f0A',     // EUR/USD 
     97: '',
   },
   chainlinkOracle: {
