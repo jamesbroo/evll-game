@@ -31,8 +31,9 @@ import { useGetHistory, useGetIsFetchingHistory } from 'state/predictions/hooks'
 import { multiplyPriceByAmount } from 'utils/prices'
 import { formatNumber } from 'utils/formatBalance'
 import { logError } from 'utils/sentry'
-import { getPayout } from './History/helpers'
 import roundLogo from "assets/round.png"
+import { getPayout } from './History/helpers'
+
 
 interface CollectRoundWinningsModalProps extends InjectedModalProps {
   onSuccess?: () => Promise<void>
